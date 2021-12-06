@@ -182,7 +182,7 @@ export const update = async (ctx) => {
   const { id } = ctx.params;
   // write에서 사옹한 schema와 비슷한데, required()가 없습니다.
   const schema = Joi.object().keys({
-    title: Joi.strung(),
+    title: Joi.string(),
     body: Joi.string(),
     tags: Joi.array().items(Joi.string()),
   });
