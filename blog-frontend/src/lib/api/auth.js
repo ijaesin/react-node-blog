@@ -11,4 +11,5 @@ export const register = ({ username, password }) =>
 // 로그인 상태 확인
 export const check = () => client.get('/api/auth/check');
 
-export const logout = () => client.post('/ali/auth/logout');
+// 로그 아웃
+export const logout = () => client.post('/api/auth/logout');
