@@ -5,6 +5,7 @@
   "license": "MIT",
   "dependencies": {
     "bcrypt": "^5.0.1",
+    "concurrently": "^6.4.0",
     "dotenv": "^10.0.0",
     "eslint-config-prettier": "^8.3.0",
     "esm": "^3.2.25",
@@ -23,6 +24,7 @@
   },
   "scripts": {
     "start": "node -r esm src",
-    "start:dev": "nodemon --watch src/ -r esm src/index.js"
+    "start:back": "nodemon --watch src/ -r esm src/index.js",
+    "start:dev": "concurrently \"yarn start:back\" \"cd ../blog-front && yarn start\""
   }
 }
